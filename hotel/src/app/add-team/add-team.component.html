@@ -1,0 +1,21 @@
+<h3>Select Manager to create Team under Selected Manager</h3>
+<select    [(ngModel)]="manager">
+    <option value="">Select Manager</option>
+    <option *ngFor="let manager of managers" value="{{manager.empId}}">{{manager.empName}}</option>   
+</select>
+
+<h3>Enter Emp Name</h3>
+<input type="text" placeholder="Employee Name" [(ngModel)]="employeeName">
+
+<h3>Select Designation</h3>
+<select  [(ngModel)]="designation">
+    <option value="">Select Designation</option>
+    <option value="1">Manager</option>
+    <option value="2">Cook</option>
+    <option value="3">Taster</option>
+</select>
+
+<button (click)=addTeamMember()>Add Team Member</button>
+{{manager}}
+{{employeeName}}
+{{designation}}  

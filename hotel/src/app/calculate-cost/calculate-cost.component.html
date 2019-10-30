@@ -1,0 +1,10 @@
+<h3>Select Team Under Manager To Calculate Total Cost for selected Team</h3>
+<select   (change)="onSelectManager($event.target.value)" >
+    <option value="Manager">Select Manager</option>
+    <option *ngFor="let manager of managers" value="{{manager.empId}}">{{manager.empName}}</option>   
+</select>
+
+<h4>Managers -> {{teamMembers.manager}}</h4>
+<h4>Cook -> {{teamMembers.cook}}</h4>
+<h4>Taster -> {{teamMembers.taster}}</h4>
+<h3>Total Cost: {{(teamMembers.manager * 300)+ (teamMembers.cook * 1000)+ (teamMembers.taster * 500)}} </h3>
